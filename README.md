@@ -48,6 +48,8 @@ This plugin layer demonstrate how to implement a CPU-based Plugin layer
 1. Make required tensor as output
 2. Allocate unified memory: CPU pointer== GPU pointer
 </br>
+
+
 **DataRoiLayer**
 </br>
 This plugin layer demonstrate how to implement a GPU Plugin layer
@@ -55,6 +57,8 @@ This plugin layer demonstrate how to implement a GPU Plugin layer
 1. Got input/output data pointer in enqueue function
 2. Launch GPU kernel with same cuda stream
 </br>
+
+
 **RecognitionLayer**
 </br>
 This plugin layer demonstrate more complicated handling of Plugin layer

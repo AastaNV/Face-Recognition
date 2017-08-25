@@ -17,7 +17,7 @@ JetPack-3.1
 </br>
 
 
-##Build
+## Build
 ```C
 $ git clone https://github.com/AastaNV/Face-Recognition
 $ cd Face-Recognition
@@ -31,7 +31,7 @@ $ make
 </br>
 
 
-##Run
+## Run
 ```C
 $ cd aarch/bin
 $ ./face-recognition
@@ -39,7 +39,9 @@ $ ./face-recognition
 
 </br>
 </br>
-##Plugin Layer
+
+
+## Plugin Layer
 ** BboxMergeLayer **
 </br>
 This plugin layer demonstrate how to implement a CPU-based Plugin layer
@@ -65,7 +67,9 @@ This plugin layer demonstrate more complicated handling of Plugin layer
 2. Define some shared variable to make between layers communication easier
 </br>
 </br>
-##Support
+
+
+## Support
 Please rise your problem in our forum to get immediately support.
 </br>
 https://devtalk.nvidia.com/default/board/189/jetson-tx2/

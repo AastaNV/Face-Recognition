@@ -15,9 +15,9 @@ using namespace nvcaffeparser1;
 static const int BATCH_SIZE = 1;
 static const int TIMING_ITERATIONS = 100;
 
-const char* model  = "/home/nvidia/face-recognition/data/deploy.prototxt";
-const char* weight = "/home/nvidia/face-recognition/data/merge.caffemodel";
-const char* label  = "/home/nvidia/face-recognition/data/labels.txt";
+const char* model  = "/home/nvidia/Face-Recognition/data/deploy.prototxt";
+const char* weight = "/home/nvidia/Face-Recognition/data/merge.caffemodel";
+const char* label  = "/home/nvidia/Face-Recognition/data/labels.txt";
 
 const char* INPUT_BLOB_NAME = "data";
 const char* OUTPUT_BLOB_COV = "coverage_fd";

@@ -21,7 +21,7 @@ public:
 	/**
 	 * Create new CUDA font overlay object using textured fonts
 	 */
-	static cudaFont* Create( const char* font_bitmap="/home/nvidia/face-recognition/data/fontmapA.png" );
+	static cudaFont* Create( const char* font_bitmap="/home/nvidia/Face-Recognition/data/fontmapA.png" );
 	
 	/**
 	 * Destructor

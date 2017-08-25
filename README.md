@@ -15,6 +15,7 @@ Jetson TX2
 JetPack-3.1
 </br>
 </br>
+</br>
 
 
 ## Build
@@ -40,28 +41,27 @@ $ ./face-recognition
 
 
 ## Plugin Layer
-`** BboxMergeLayer **`
+`**BboxMergeLayer**`
 </br>
 This plugin layer demonstrate how to implement a CPU-based Plugin layer
 </br>
 1. Make required tensor as output
 2. Allocate unified memory: CPU pointer== GPU pointer
 </br>
-</br>
-`** DataRoiLayer **`
+`**DataRoiLayer**`
 </br>
 This plugin layer demonstrate how to implement a GPU Plugin layer
 </br>
 1. Got input/output data pointer in enqueue function
 2. Launch GPU kernel with same cuda stream
 </br>
-</br>
-`** RecognitionLayer **`
+`**RecognitionLayer**`
 </br>
 This plugin layer demonstrate more complicated handling of Plugin layer
 </br>
 1. This class can handle two differient layers: selectBbox and summaryLabel
 2. Define some shared variable to make between layers communication easier
+</br>
 </br>
 </br>
 

@@ -1,12 +1,11 @@
 # Face-Recognition
 This sample targets for demonstrating TensorRT2.1 Plugin API
 </br>
+</br>
 We leverage most of the functions from jetson_inference; please check it first if you need more DL samples:
 </br>
-https://github.com/dusty-nv/jetson-inference
-</br>
-</br>
-</br>
+<https://github.com/dusty-nv/jetson-inference>
+
 ---
 ## Environment
 Jetson TX2

@@ -33,7 +33,7 @@ $ make
 
 ## Run
 ```C
-$ cd aarch/bin
+$ cd aarch64/bin
 $ ./face-recognition
 ```
 

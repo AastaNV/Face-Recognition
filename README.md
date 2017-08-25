@@ -41,7 +41,7 @@ $ ./face-recognition
 
 
 ## Plugin Layer
-`**BboxMergeLayer**`
+**BboxMergeLayer**
 </br>
 This plugin layer demonstrate how to implement a CPU-based Plugin layer
 </br>

@@ -9,12 +9,14 @@ We leverage most of the functions from jetson_inference; please check it first i
 </br>
 
 
-##Environment
+## Environment
 Jetson TX2
 </br>
 JetPack-3.1
 </br>
 </br>
+
+
 ##Build
 ```C
 $ git clone https://github.com/AastaNV/Face-Recognition
@@ -27,6 +29,8 @@ $ make
 
 </br>
 </br>
+
+
 ##Run
 ```C
 $ cd aarch/bin

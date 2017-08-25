@@ -67,12 +67,12 @@ This plugin layer demonstrate more complicated handling of Plugin layer
 2. Define some shared variable to make between layers communication easier
 </br>
 </br>
-</br>
 
 
 ## Support
 Please rise your problem in our forum to get immediately support.
 </br>
 https://devtalk.nvidia.com/default/board/189/jetson-tx2/
+</br>
 </br>
 </br>

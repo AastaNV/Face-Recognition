@@ -153,8 +153,8 @@ void convertROI(float* input, float* output, char* mean, const int* srcSize, con
 
     int bbox_x = min(max(roi[0], 0), srcSize[2]-1);
     int bbox_y = min(max(roi[1], 0), srcSize[1]-1);
-    int bbox_w = min(max(roi[2]-roi[0], 0), srcSize[2]-1 );
-    int bbox_h = min(max(roi[3]-roi[1], 0), srcSize[1]-1 );
+    int bbox_w = min(max(roi[2]-roi[0], 0), srcSize[2]-bbox_x-1 );
+    int bbox_h = min(max(roi[3]-roi[1], 0), srcSize[1]-bbox_y-1 );
 
     dim3 dimBlock(32,32);
     dim3 dimGrid(dstSize[2]/dimBlock.x+1, dstSize[1]/dimBlock.y+1);

@@ -20,6 +20,7 @@ JetPack-3.1
 
 ## Build
 ```C
+$ sudo apt-get install git cmake
 $ git clone https://github.com/AastaNV/Face-Recognition
 $ cd Face-Recognition
 $ mkdir build

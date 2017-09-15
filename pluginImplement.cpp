@@ -400,14 +400,18 @@ int RecognitionLayer::summary(const void*const *inputs, void** outputs)
                 classMax   = value;
             }
         }
+        bboxTable[queryIdx]->labelID = classIndex;
+/*
        if( tagExist(classIndex, queryIdx) < 0 ) {
            tagTable.push_back(new tagProfile(queryIdx,classIndex));
            bboxTable[queryIdx]->labelID = tagTable.size()-1;
         }
-
+*/
     }
     for( int i=0; i<bboxNum; i++ )
     {
+        label[i] = bboxTable[queryIdx]->labelID;
+/*
         label[i] = -1;
         for( int j=0; j<bboxTable.size(); j++)
         {
@@ -417,6 +421,7 @@ int RecognitionLayer::summary(const void*const *inputs, void** outputs)
                 break;
             }
         }
+*/
     }
     return 0;
 }

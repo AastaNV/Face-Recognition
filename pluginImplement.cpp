@@ -8,7 +8,7 @@ bool bboxOverlap(const float4& r1, const float4& r2)
     float unionSize = (std::max(r1.z, r2.z)-std::min(r1.x, r2.x)) * (std::max(r1.w, r2.w)-std::min(r1.y, r2.y));
     float interSize = (std::min(r1.z, r2.z)-std::max(r1.x, r2.x)) * (std::min(r1.w, r2.w)-std::max(r1.y, r2.y));
     if( unionSize == 0 ) return true;
-    else return (interSize/unionSize) > 0.2;
+    else return (interSize/unionSize) > 0.5;
 }
 
 /******************************/
@@ -411,13 +411,14 @@ int RecognitionLayer::summary(const void*const *inputs, void** outputs)
 */
 
     }
+
     for( int i=0; i<bboxNum; i++ )
     {
         label[i] = -1;
         for( int j=0; j<bboxTable.size(); j++)
         {
             if( bboxTable[j]->bboxNum==i )
-                label[i] = bboxTable[queryIdx]->labelID;
+                label[i] = bboxTable[j]->labelID;
         }
 /*
         for( int j=0; j<bboxTable.size(); j++)
@@ -430,6 +431,11 @@ int RecognitionLayer::summary(const void*const *inputs, void** outputs)
         }
 */
     }
+
+    for( int i=bboxTable.size()-1; i>=0; i-- )
+        if( bboxTable[i]->bboxNum==-1 ) bboxTable.erase(bboxTable.begin()+i);
+    for( int i=0; i<bboxTable.size(); i++) bboxTable[i]->bboxNum = -1;
+
     return 0;
 }
 

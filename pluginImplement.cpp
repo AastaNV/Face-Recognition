@@ -372,6 +372,7 @@ int RecognitionLayer::select(const void*const *inputs, void** outputs)
             select[3] = bboxTable[queryIdx]->pos.w;
             index[0] = queryIdx;
             std::cout << "pass "<< queryIdx << " to trt" << std::endl;
+            std::cout << select[0] << " " << select[1] << " " << select[2] << " " << select[3] << " " << std::endl;
         }
     }
     else index[0] = -1;
@@ -401,18 +402,24 @@ int RecognitionLayer::summary(const void*const *inputs, void** outputs)
             }
         }
         bboxTable[queryIdx]->labelID = classIndex;
+        std::cout << "ID=" <<queryIdx << ", label=" << classIndex << std::endl;
 /*
        if( tagExist(classIndex, queryIdx) < 0 ) {
            tagTable.push_back(new tagProfile(queryIdx,classIndex));
            bboxTable[queryIdx]->labelID = tagTable.size()-1;
         }
 */
+
     }
     for( int i=0; i<bboxNum; i++ )
     {
-        label[i] = bboxTable[queryIdx]->labelID;
-/*
         label[i] = -1;
+        for( int j=0; j<bboxTable.size(); j++)
+        {
+            if( bboxTable[j]->bboxNum==i )
+                label[i] = bboxTable[queryIdx]->labelID;
+        }
+/*
         for( int j=0; j<bboxTable.size(); j++)
         {
             if( bboxTable[j]->bboxNum==i )
